@@ -35,12 +35,18 @@
             var calc1 = naltura ** 2
             var imc = npeso / calc1
             if(imc>= 18.5 && imc <= 24.9){
-                res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta saudavel </p>`  
-            }else{
-               res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta na hora de se cuidar :-)</p>`
-            }
-        }
- 
+                res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta SAUDAVEL </p>`  
+            }else if(imc>= 25 && imc <= 29.9){
+                res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta com SOBREPESO </p>`
+               }else if(imc >= 30){
+                    res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta com OBESIDADE </p>`
+                }else{
+                    res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta com DESNUTRIÇÂO VOCÊ VAI MORRER </p>`
+                }
+        }       
+            
+        
+
     </script>
     
 </body>
