@@ -8,24 +8,151 @@
         *{
             margin: 0% ;
             padding: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            position: relative;
+        }
+        p, a{
+            margin: 0px 3px;
+            padding: 0px 5px;
+            border-radius: 3px;
+            background-color: gray;
+            display: inline;
+            color: white;
+            text-decoration: none;
+        }
+        header{
+            background-image:radial-gradient(rgb(0, 100, 0), rgb(0, 37, 0), black);
+            height: 250px;
+            color: white;
+        }
+        div#cabeca{
+            height: 80%;
+            text-align: center;
+            padding: 50px;
+            box-shadow:2px 0px 20px black ;
+        }
+        nav a {
+            margin-top: 20px;
+            padding: 7px;
+            background-color: rgb(124, 124, 124);
+            color: white;
+        }
+
+        div#calculadora {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , 7%);
+            background-color: black;
+            border-radius: 10px;
+            height: 500px;
+            width: 400px;
+    
+        }
+        div#resultado{
+            background-color: rgb(199, 199, 199);
+            height: 75px;
+            margin: 0px 18px;
+        }
+        div#logical {
+            margin: 18px;
+            background-color: blue;
+            height:calc(100% - 130px)
+        }
+        div#logical table{
+            text-align: center;
+            border-collapse: collapse;
+            margin: 20px;
+            width: calc(100% - 42px);
+            height: 95%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            text-decoration: solid;
+        }
+        div#logical table td{
+            border: 2px solid black;
+        }
+        div#logical table td > input{
+            font-family: monospace;
+           padding: 39px 30px;
+           margin: 0%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div>
+    <header id="header">
+        <div id="cabeca">
             <h1>
-                Pratica de conhecimentos mediana 
-            </h1>/
+                Pratica de conhecimentos mediana 21/07/2025
+            </h1>
         </div>
+        <nav>
+            <a href="#" onclick="clicarcalc()">CALCULADORA</a>
+        </nav>
     </header>
-    <main>
+    <div id="calculadora">
+        <a href="#" onclick="voltar()">x</a>
+            <div id="resultado">
+
+            </div>
+            <div id="logical">
+                <table id="teste">
+                    <tr>
+                        <td>
+                        </a><input type="button" value="7" onclick="$7()"></td>
+                        <td onclick="$8()"><a>8</a></td>
+                        <td onclick="$9()"><a>9</a></td>
+                        <td onclick="menos()"><a>-</a></td>
+                    </tr>
+                    <tr>
+                        <td ><input type="button" value="4" onclick="$4()"></td>
+                        <td onclick="$5()"><a>5</a></td>
+                        <td onclick="6()"><a>6</a></td>
+                        <td onclick="soma()"><a>+</a></td>
+                    </tr>
+                    <tr>
+                        <td><a>1</a></td>
+                        <td onclick="$2()"><a>2</a></td>
+                        <td onclick="$3()"><a>3</a></td>
+                        <td ><input type="button" value="=" onclick="total()"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
         
-    </main>
     <footer>
 
     </footer>
     <script>
+        var calculadora = window.document.getElementById("calculadora")
+        var cabeca = window.document.getElemnetById("header")
+        var rs = window.document.getElementById("resultado")
+        var s = n1 + n2
+        var sb = n1 - n2
+        function clicarcalc(){
+            var fundo = document.querySelector('body')
+            calculadora.style.display= "block"
+            header.style.display= "none"
+            fundo.style.background = "rgba(114, 114, 114, 0.527)" 
+        }
+        function voltar(){
+            var fundo = document.querySelector('body')
+            calculadora.style.display= "none"
+            header.style.display= "block"
+            fundo.style.background = "black"  
+            fundo.style.background = "white" 
+        }
+        function $7(){
+            var n1 = 7
+        }
+        function $7(){
+            var n2 = 4
+        }
 
     </script>
     
