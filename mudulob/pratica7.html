@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratica IMC</title>
+</head>
+<body style="text-align: right; margin-right:40%; ">
+    <h1 style="text-align: center; ">IMC</h1>
+
+    <label for="inome">Digite seu nome:</label>
+    <input type="text" name="inome" id="inome">
+    <br>
+    <label for="ipeso">Seu peso:</label>
+    <input type="number" name="peso" id="ipeso">
+    <br>
+    <label for="ialtura">Sua altura:</label>
+    <input type="number" name="altura" id="ialtura">
+    <br>
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        
+        function enviar(){
+            var nome = document.getElementById("inome")
+            var altura = document.getElementById('ialrura')
+            var peso = document.getElementById('ipeso')
+            var res = document.getElementById('res')
+            var snome = String(inome.value)
+            var naltura = Number(ialtura.value)
+            var npeso = Number(ipeso.value)
+            var calc1 = naltura ** 2
+            var imc = npeso / calc1
+            if(imc>= 18.5 && imc <= 24.9){
+                res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta saudavel </p>`  
+            }else{
+               res.innerHTML = `<p>Olá ${snome} seu IMC é de :<strong>${imc}</strong> e esta na hora de se cuidar :-)</p>`
+            }
+        }
+ 
+    </script>
+    
+</body>
+</html>
