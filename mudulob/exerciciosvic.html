@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inb">Digite um numero</label>
+    <input type="number" name="nb" id="inb">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        var n1 = document.getElementById('inb')
+        var res = document.querySelector('div#res')
+        var an = n1 --
+        var su = n1 ++
+        function enviar(){
+            res.innerHTML = `O numero digitado foi ${n1} e seu sucessor é ${su} e o antecessor é ${an}`
+        }
+    </script>
+</body>
+</html>

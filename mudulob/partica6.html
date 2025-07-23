@@ -62,10 +62,18 @@
             background-color: blue;
             height:calc(100% - 130px)
         }
+        div#logical input{
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 2em;
+            margin: 2px;
+            width: 84px;
+            height: 88px;
+        }
         div#logical table{
             text-align: center;
             border-collapse: collapse;
-            margin: 20px;
+            margin: 50px;
             width: calc(100% - 42px);
             height: 95%;
             color: white;
@@ -76,10 +84,11 @@
         div#logical table td{
             border: 2px solid black;
         }
-        div#logical table td > input{
+        div#logical input{
             font-family: monospace;
            padding: 39px 30px;
            margin: 0%;
+           border-radius: 15px;
         }
     </style>
 </head>
@@ -100,27 +109,25 @@
 
             </div>
             <div id="logical">
-                <table id="teste">
-                    <tr>
-                        <td>
-                        </a><input type="button" value="7" onclick="$7()"></td>
-                        <td onclick="$8()"><a>8</a></td>
-                        <td onclick="$9()"><a>9</a></td>
-                        <td onclick="menos()"><a>-</a></td>
-                    </tr>
-                    <tr>
-                        <td ><input type="button" value="4" onclick="$4()"></td>
-                        <td onclick="$5()"><a>5</a></td>
-                        <td onclick="6()"><a>6</a></td>
-                        <td onclick="soma()"><a>+</a></td>
-                    </tr>
-                    <tr>
-                        <td><a>1</a></td>
-                        <td onclick="$2()"><a>2</a></td>
-                        <td onclick="$3()"><a>3</a></td>
-                        <td ><input type="button" value="=" onclick="total()"></td>
-                    </tr>
-                </table>
+                <input type="button" value="7" onclick="i7()">
+                <input type="button" value="8" onclick="i8()">
+                <input type="button" value="9" onclick="i9()">
+                <input type="button" value="+" onclick="soma()">
+                <br>
+                <input type="button" value="4" onclick="i4()">
+                <input type="button" value="5" onclick="i5()">
+                <input type="button" value="6" onclick="i6()">
+                <input type="button" value="-" onclick="sub()">
+                <br>
+                <input type="button" value="1" onclick="i1()">
+                <input type="button" value="2" onclick="i2()">
+                <input type="button" value="3" onclick="i3()">
+                <input type="button" value="*" onclick="multi()">
+                <br>
+                <input type="button" value="0" onclick="i0()">
+                <input type="button" value="C" onclick="apagar()">
+                <input type="button" value="=" onclick="total()">
+                <input type="button" value="/" onclick="div()">
             </div>
 
         </div>
@@ -130,29 +137,114 @@
     </footer>
     <script>
         var calculadora = window.document.getElementById("calculadora")
-        var cabeca = window.document.getElemnetById("header")
-        var rs = window.document.getElementById("resultado")
-        var s = n1 + n2
-        var sb = n1 - n2
+        var rs = document.querySelector('div#resultado')
+        var n1 = 0
+        var n2 = 0
+        var rz = 0
         function clicarcalc(){
             var fundo = document.querySelector('body')
             calculadora.style.display= "block"
             header.style.display= "none"
             fundo.style.background = "rgba(114, 114, 114, 0.527)" 
+            rs.innerHTML = `<p>numero 1 = ${n1} e numero 2 = ${n2}</p> <br> <p>O total da sua operação é de <strong>${rz}</strong></p>`
         }
         function voltar(){
             var fundo = document.querySelector('body')
             calculadora.style.display= "none"
             header.style.display= "block"
             fundo.style.background = "black"  
-            fundo.style.background = "white" 
+            fundo.style.background = "white"
         }
-        function $7(){
-            var n1 = 7
+        function i7(){
+            if(n1 == 0){
+                n1=7
+            }else{
+                n2=7
+            }
         }
-        function $7(){
-            var n2 = 4
+        function i8(){
+            if(n1 == 0){
+                n1=8
+            }else{
+                n2= 8
+            }
         }
+        function i9(){
+            if(n1 == 0){
+                n1=9
+            }else{
+                n2=9
+            }
+        }
+        function soma(){
+         rz = n1 + n2
+        }
+        function i4(){
+            if(n1 == 0){
+                n1=4
+            }else{
+                n2=5
+            }
+        }
+        function i5(){
+            if(n1 == 0){
+                n1=5
+            }else{
+                n2=5
+            }
+        }
+        function i6(){
+            if(n1 == 0){
+                n1=6
+            }else{
+                n2=6
+            }
+        }
+        function sub(){
+            rz = n1 - n2
+        }
+        function i1(){
+            if(n1 == 0){
+                n1=1
+            }else{
+                n2=1
+            }
+        }
+        function i2(){
+           if(n1 == 0){
+                n1=2
+            }else{
+                n2=2
+            }
+        }
+        function i3(){
+           if(n1 == 0){
+                n1=3
+            }else{
+                n2=3
+            }
+        }
+        function multi(){
+            rz = n1 * n2
+        }
+        function i0(){
+            if(n1 > 0){
+                n1 = 0.0
+            }else{
+                n2 = 0.0
+            }
+        }
+        function apagar(){
+            n1 = 0
+            n2 = 0
+        }
+        function total(){
+            rs.innerHTML = `<p>numero 1 = ${n1} e numero 2 = ${n2}</p> <br> <p>O total da sua operação é de <strong>${rz}</strong></p>`
+        }
+        function div(){
+            rz = n1 / n2
+        }
+
 
     </script>
     
