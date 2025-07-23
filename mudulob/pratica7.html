@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pratica IMC</title>
 </head>
-<body style="text-align: right; margin-right:40%; ">
+<body style="text-align: right; margin-right:15%; ">
     <h1 style="text-align: center; ">IMC</h1>
 
     <label for="inome">Digite seu nome:</label>
-    <input type="text" name="inome" id="inome">
+    <input type="text" name="inome" id="inome" required placeholder="SEU NOME">
     <br>
     <label for="ipeso">Seu peso:</label>
-    <input type="number" name="peso" id="ipeso">
+    <input type="number" name="peso" id="ipeso" required placeholder="Seu peso arredondado">
     <br>
     <label for="ialtura">Sua altura:</label>
-    <input type="number" name="altura" id="ialtura">
+    <input type="number" name="altura" id="ialtura" required placeholder="Neste formato 1.78">
     <br>
     <input type="button" value="Enviar" onclick="enviar()">
     <div id="res">
