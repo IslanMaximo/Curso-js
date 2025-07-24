@@ -7,8 +7,8 @@
 </head>
 <body>
     <label for="n4">Digite um numero e descubra seu antecessor e sucessor</label>
-    <input type="number" name="nb" id="n4">
-    <input type="button" value="enviar" onclick="enviar()"><br>
+    <input type="number" name="n" id="n">
+    <input type="button" value="enviar"><br>
     <label for="n4">Digite um numero e descubra o dobro e o tripo</label>
     <input type="number" name="nb" id="n4">
     <input type="button" value="enviar" onclick="enviar()">
@@ -17,15 +17,7 @@
 
     </div>
     <script>
-        
-        function enviar(){
-            var n1 = document.getElementById('n4')
-            var res = document.querySelector('div#res')
-            var numero = Number(n4.value)
-            var an = numero --
-            var su = numero ++
-            res.innerHTML = `O numero digitado foi ${numero} e seu sucessor é ${su} e o antecessor é ${an}`
-        }
+    
     </script>
 </body>
 </html>
