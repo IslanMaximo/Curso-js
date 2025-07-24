@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="conteudo">
+        <h2>Antecessor e Sucessor</h2>
         <label for="n">Digite um numero e descubra seu antecessor e sucessor</label>
         <input type="number" name="n" id="n" placeholder="digite um numero">
         <input type="button" value="enviar" onclick="enviar()"><br>
@@ -15,6 +16,7 @@
     </div>
     <br>
     <div class="conteudo">
+        <h2>Media de notas</h2>
         <form action="media">
             <label for="nt1">Digite a primeira nota </label>
             <input type="number" name="nt1" id="nt1" placeholder="primeira nota">
@@ -30,7 +32,13 @@
     </div>
     <br>
     <div class="conteudo">
+        <h2>Medidas em CM e MM</h2>
+        <label for="metros">Digite uma medida em metros </label>
+        <input type="number" name="metros" id="metros" placeholder="Digite a medida aqui">
+        <input type="button" value="medir" onclick="enviar3()">
+        <div id="resultado3">
 
+        </div>
     </div>
 
     <script>
@@ -53,6 +61,14 @@
             var nt2 = Number(nt2.value)
             var media = (nt1+nt2)/2
             resultado2.innerHTML = `<p>suas notas foram ${nt1} e ${nt2}</p> E sua média foi de ${media}`
+        }
+        function enviar3(){
+            var m = document.getElementById('metros')
+            var resultado3 = document.getElementById('resultado3')
+            var m = Number(metros.value)
+            var cm = m * 100
+            var mm = m *1000
+            resultado3.innerHTML = `${m} em centimetros é ${cm}cm e em milimetros é ${mm}mm`
         }
     </script>
 </body>
