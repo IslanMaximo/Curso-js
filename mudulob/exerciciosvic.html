@@ -6,18 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="n4">Digite um numero e descubra seu antecessor e sucessor</label>
+    <label for="n">Digite um numero e descubra seu antecessor e sucessor</label>
     <input type="number" name="n" id="n">
-    <input type="button" value="enviar"><br>
-    <label for="n4">Digite um numero e descubra o dobro e o tripo</label>
-    <input type="number" name="nb" id="n4">
-    <input type="button" value="enviar" onclick="enviar()">
+    <input type="button" value="enviar" onclick="enviar()"><br>
 
     <div id="res">
 
     </div>
+    <form action="media">media
+        <label for="nt1">Digite a primeira nota </label>
+        <input type="number" name="nt1" id="nt1" placeholder="primeira nota">
+        <label for="nt2">Digite a segunda nota  </label>
+        <input type="number" name="nt2" id="nt2" placeholder="segunda nota">
+        <input type="submit" name="calcular" id="calcular">
+    </form>
     <script>
-    
+        function enviar(){
+            var n = window.document.getElementById('n')
+            var resultado = window.document.getElementById('res')
+            var n = Number(n.value)
+            var s = n - 1
+            var a = n + 1
+            var dp = n*2
+            var tr = n*3
+            var raiz = n**0.5
+            resultado.innerHTML = `<p> O numero escolhido foi <strog>${n}</strog> </p><p>o seu antecessor é ${s} e o seu sucessor é ${a}</p> <p>o dobro é ${dp} e o triplo é ${tr} e a raiz quadrada é <strong>${raiz}</strong> </p>`
+        }
     </script>
 </body>
 </html>
