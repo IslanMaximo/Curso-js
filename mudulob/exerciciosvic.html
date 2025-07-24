@@ -6,19 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="inb">Digite um numero</label>
-    <input type="number" name="nb" id="inb">
+    <label for="n4">Digite um numero e descubra seu antecessor e sucessor</label>
+    <input type="number" name="nb" id="n4">
+    <input type="button" value="enviar" onclick="enviar()"><br>
+    <label for="n4">Digite um numero e descubra o dobro e o tripo</label>
+    <input type="number" name="nb" id="n4">
     <input type="button" value="enviar" onclick="enviar()">
+
     <div id="res">
 
     </div>
     <script>
-        var n1 = document.getElementById('inb')
-        var res = document.querySelector('div#res')
-        var an = n1 --
-        var su = n1 ++
+        
         function enviar(){
-            res.innerHTML = `O numero digitado foi ${n1} e seu sucessor é ${su} e o antecessor é ${an}`
+            var n1 = document.getElementById('n4')
+            var res = document.querySelector('div#res')
+            var numero = Number(n4.value)
+            var an = numero --
+            var su = numero ++
+            res.innerHTML = `O numero digitado foi ${numero} e seu sucessor é ${su} e o antecessor é ${an}`
         }
     </script>
 </body>
