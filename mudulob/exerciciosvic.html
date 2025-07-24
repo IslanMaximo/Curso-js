@@ -40,6 +40,25 @@
 
         </div>
     </div>
+    <div class="conteudo">
+        <h2>VAMOS treinar a taboada</h2>
+        <label for="tb">digite um numero inteiro</label>
+        <input type="number" name="tb" id="tb" placeholder="numero inteiro">
+        <input type="button" value="calcular taboada" onclick="enviar4()">
+        <div id="resultado4">
+
+        </div>
+    </div>
+    <div class="conteudo">
+        <h2>Bem vindo a casa de cambio</h2>
+        <label for="rs">Quantos R$ voce tem hoje ?</label>
+        <input type="number" name="rs" id="rs">
+        <br>
+        <input type="button" value="converter &#x1F4B1" onclick="enviar5()">
+        <div id="resultado5">
+
+        </div>
+    </div>
 
     <script>
         function enviar(){
@@ -51,7 +70,8 @@
             var dp = n*2
             var tr = n*3
             var raiz = n**0.5
-            resultado.innerHTML = `<p> O numero escolhido foi <strog>${n}</strog> </p><p>o seu antecessor é ${s} e o seu sucessor é ${a}</p> <p>o dobro é ${dp} e o triplo é ${tr} e a raiz quadrada é <strong>${raiz}</strong> </p>`
+            var raiza = raiz.toFixed(2)
+            resultado.innerHTML = `<p> O numero escolhido foi <strog>${n}</strog> </p><p>o seu antecessor é ${s} e o seu sucessor é ${a}</p> <p>o dobro é ${dp} e o triplo é ${tr} e a raiz quadrada é <strong>${raiza}</strong> </p>`
         }
         function enviar2(){
             var resultado2 = document.getElementById('resultado2')
@@ -60,7 +80,7 @@
             var nt1 = Number(nt1.value)
             var nt2 = Number(nt2.value)
             var media = (nt1+nt2)/2
-            resultado2.innerHTML = `<p>suas notas foram ${nt1} e ${nt2}</p> E sua média foi de ${media}`
+            resultado2.innerHTML = `<p>suas notas foram ${nt1} no primeiro semestre  e ${nt2} no segundo </p> Então sua média foi de ${media}`
         }
         function enviar3(){
             var m = document.getElementById('metros')
@@ -69,6 +89,40 @@
             var cm = m * 100
             var mm = m *1000
             resultado3.innerHTML = `${m} em centimetros é ${cm}cm e em milimetros é ${mm}mm`
+        }
+        function enviar4(){
+            var tb = document.getElementById('tb')
+            var resultado4= window.document.getElementById('resultado4')
+            var tb = parseInt(tb.value)
+            var r1 = tb *1
+            var r2 = tb *2
+            var r3 = tb *3
+            var r4 = tb *4
+            var r5 = tb *5
+            var r6 = tb *6
+            var r7 = tb *7
+            var r8 = tb *8
+            var r9 = tb *9
+            var r10 = tb *10
+            resultado4.innerHTML = `<h3>Taboada do ${tb}</h3>
+            <p>${tb} * 1 = <strong>${r1}</strong></p>
+            <p>${tb} * 2 = <strog>${r2}</strog></p>
+            <p>${tb} * 3 = <strog>${r3}</strog></p>
+            <p>${tb} * 4 = <strog>${r4}</strog></p>
+            <p>${tb} * 5 = <strog>${r5}</strog></p>
+            <p>${tb} * 6 = <strog>${r6}</strog></p>
+            <p>${tb} * 7 = <strog>${r7}</strog></p>
+            <p>${tb} * 8 = <strog>${r8}</strog></p>
+            <p>${tb} * 9 = <strog>${r9}</strog></p>
+            <p>${tb} * 10 = <strog>${r10}</strog></p>`
+        }
+        function enviar5(){
+            var rs = document.getElementById('rs')
+            var resultado5 = document.getElementById('resultado5')
+            var rs = parseInt(rs.value)
+            var cv = rs / 3.27
+            var cva = cv.toFixed(2)
+            resultado5.innerHTML = `o total de Dolares que você consegue trocar é de ${cva}&#x1F4B2`
         }
     </script>
 </body>
