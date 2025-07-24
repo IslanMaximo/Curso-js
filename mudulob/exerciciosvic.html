@@ -59,6 +59,21 @@
 
         </div>
     </div>
+    <div class="conteudo">
+        <h2>Vamos ver a quantia de tinta necessaria</h2>
+        <label for="largura">Largura da parede</label>
+        <input type="number" name="largura" id="largura" placeholder="digite a largura ex11.8">
+        <br>
+        <label for="altura">Altura da parede</label>
+        <input type="number" name="altura" id="altura" placeholder="Digite a altura ex11.8">
+        <br>
+        <input type="button" value="calcular &#x1F4CF" onclick="enviar6()">
+        <div id="resultado6">
+
+        </div>
+
+
+    </div>
 
     <script>
         function enviar(){
@@ -123,6 +138,16 @@
             var cv = rs / 3.27
             var cva = cv.toFixed(2)
             resultado5.innerHTML = `o total de Dolares que você consegue trocar é de ${cva}&#x1F4B2`
+        }
+        function enviar6(){
+            var alt = document.getElementById('altura')
+            var larg = document.getElementById('largura')
+            var resultado6 = document.getElementById('resultado6')
+            var alt = Number(altura.value)
+            var larg = Number(largura.value)
+            var area = alt * larg
+            var rend = area/2
+            resultado6.innerHTML = `<strong>O total de tinta necessaria é de ${rend} para pintar ${area}m²</strong>`
         }
     </script>
 </body>
