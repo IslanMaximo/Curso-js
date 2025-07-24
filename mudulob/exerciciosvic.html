@@ -6,27 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="n">Digite um numero e descubra seu antecessor e sucessor</label>
-    <input type="number" name="n" id="n">
-    <input type="button" value="enviar" onclick="enviar()"><br>
-
-    <div id="res">
-
+    <div class="conteudo">
+        <label for="n">Digite um numero e descubra seu antecessor e sucessor</label>
+        <input type="number" name="n" id="n" placeholder="digite um numero">
+        <input type="button" value="enviar" onclick="enviar()"><br>
+        <div id="res">
+        </div>
     </div>
     <br>
-    <form action="media">
-        <label for="nt1">Digite a primeira nota </label>
-        <input type="number" name="nt1" id="nt1" placeholder="primeira nota">
-        <br>
-        <label for="nt2">Digite a segunda nota  </label>
-        <input type="number" name="nt2" id="nt2" placeholder="segunda nota">
-        <br>
-        <input type="button" value="enviar" onclick="enviar2()">
-        <br>
-        <div id="resultado2">
+    <div class="conteudo">
+        <form action="media">
+            <label for="nt1">Digite a primeira nota </label>
+            <input type="number" name="nt1" id="nt1" placeholder="primeira nota">
+            <br>
+            <label for="nt2">Digite a segunda nota  </label>
+            <input type="number" name="nt2" id="nt2" placeholder="segunda nota">
+            <br>
+            <input type="button" value="enviar" onclick="enviar2()">
+            <br>
+            <div id="resultado2">
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="conteudo">
 
-        </div>
-    </form>
+    </div>
 
     <script>
         function enviar(){
