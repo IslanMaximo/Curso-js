@@ -6,14 +6,20 @@ function enviar(){
    if(fano.value.length < 4 || fano.value > ano){
     window.alert('Confira os campos preenchidos')
    }else{
-    var fsex = document.getElementById('radsex')
+    var fsex = document.getElementsByName('radsex')
     var idade = ano - Number(fano.value)
     var genero = ''
-    if(fsex['0'].checked){
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
+    if(fsex[0].checked){
         genero = 'Homem'
+        img.setAttribute('src', 'img/ex002/homem.jpg')
     }else{
         genero = 'Mulher'
+        img.setAttribute('src', 'img/ex002/mulher.jpg')
     }
-    res.innerHTML= `Você é ${genero} e tem ${idade}anos de idade`
+    res.innerHTML= `<p>Você é ${genero} e tem ${idade} anos de idade</p>`
+    res.appendChild(img)
+    
    }
 }

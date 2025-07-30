@@ -1,0 +1,33 @@
+@charset "UTF-8";
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    text-align: center;
+    background-color: rgb(36, 173, 253);
+}
+body h1, a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+}
+section{
+    text-align: left;
+    margin: 0px auto 20px auto;
+    max-width: 700px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514);
+}
+div#resultado{
+    margin: 15px;
+}
+img#foto{
+    margin: 0%;
+    padding: 0%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
