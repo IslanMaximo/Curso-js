@@ -4,26 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pratica</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(62, 139, 255);
+            color: white;
+            text-align: center;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.288);
+        }
+        section{
+            color: black;
+            margin: auto;
+            width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.568);
+        }
+        div#res{
+            width: 90%;
+            padding: 10px;
+        }
+        input{
+            width: 300px;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <input type="button" value="executar" onclick="executar()">
-        <div id="res">
-
-        </div>
-    </section>
-    <script>
-        var res = document.getElementById('res')
-        function executar(){
-            var c = 0
-            while(c<5){
-                c++
-                res.innerHTML += `<p>numero ${c}</p>`
-            }
-                window.alert('fim')
-            
-        }
+   <h1>
+    Vamos contar
+   </h1>
+   <section>
+    <input type="number" name="inicio" id="inicio" placeholder="Inicio">
+    <input type="number" name="fim" id="fim" placeholder="Fim">
+    <input type="number" name="passo" id="passo" placeholder="De quantos em quantos">
+    <input type="button" value="contar" onclick="contar()">
+    <div id="res">
+        <p>Preparando para contar.......</p>
+    </div>
+   </section>
+   <footer>
+    <p>&copy;Islan</p>
+   </footer>
+   <script>
+    let inicio = document.getElementById('inicio')
+    let fim = document.getElementById('fim')
+    let passo = document.getElementById('passo')
+    let res = document.querySelector('div#res')
+    function contar(){
         
-    </script>
+        if(inicio.value.length == 0 || fim.value.legth == 0 || passo.value.length == 0){
+            //alerta de erro 
+            window.alert('[ERRO] Há algum campo vazio. Verifique e tente novamente')
+        }else{
+            res.innerHTML = 'contando'
+            var n1 = Number(inicio.value)
+            var n2 = Number(fim.value)
+            var n3 = Number(passo.value)
+
+            //numeros regressivos
+            if(n1 >= n2){
+                for(var c = n1; c >= n2; c -= n3){
+                res.innerHTML += `${c} \u{2705} `
+                }
+            }else{  
+                //numeros crescente              
+                for(var c = n1; c <= n2; c += n3){
+                    res.innerHTML += ` ${c} \u{2705} `
+                }
+            }
+            //final
+            res.innerHTML += ` \u{1FAE1} `
+        }
+    }
+   </script>
+        
 </body>
 </html>
