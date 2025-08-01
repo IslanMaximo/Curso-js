@@ -1,0 +1,1 @@
+let amigo = {nome: 'islan', sexo: 'masculino', peso: 100.3}
